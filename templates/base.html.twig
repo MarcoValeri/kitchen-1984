@@ -15,6 +15,19 @@
         {% endblock %}
     </head>
     <body>
+        <header>
+            <nav class="nav">
+                <ul class="nav__list no-bullet-point">
+                    <li class="nav__item"><a class="link-load" href="{{ path('app_page_home') }}">Home</a></li>
+                    <li class="nav__item"><a class="link-load" href="#">Ricette</a></li>
+                    <li class="nav__item"><a class="link-load" href="#">Strumenti da cucina</a></li>
+                    <li class="nav__item logo"><a class="link-no" href="#">Kitchen1984</a></li>
+                    <li class="nav__item"><a class="link-load" href="#">Guide</a></li>
+                    <li class="nav__item"><a class="link-load" href="#">Chi siamo</a></li>
+                    <li class="nav__item"><a class="link-load" href="#">Contatti</a></li>
+                </ul>
+            </nav>
+        </header>
         {% block body %}{% endblock %}
     </body>
 </html>
