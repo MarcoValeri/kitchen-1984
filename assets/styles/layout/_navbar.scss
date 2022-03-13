@@ -3,12 +3,64 @@
     text-align: center;
     border: 1px solid #000;
 
-    &__list {
+    &__wrap {
+        position: relative;
+    }
+
+    &__input {
+        display: none;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+
+        @include respond('xl') {
+            display: block;
+
+            &:checked {
+                opacity: 0;
+            }
+
+            &:checked ~ .nav__span {
+                opacity: 0;
+            }
+
+            &:checked ~ .nav__menu {
+                display: block;
+            }
+        }
+    }
+
+    &__menu-mobile {
+        position: absolute;
+        border: 1px solid #f00;
+    }
+
+    &__span {
+        display: none;
+        width: 3rem;
+        height: .5rem;
+        margin-bottom: .5rem;
+        background-color: $color-black;
+
+        @include respond('xl') {
+            display: block;
+        }
+    }
+
+    &__menu {
         font-size: 2rem;
+
+        @include respond('xl') {
+            display: none;
+        }
     }
 
     &__item {
         display: inline-block;
         padding: 1rem;
+
+        @include respond('xl') {
+            display: block;
+        }
     }
 }
