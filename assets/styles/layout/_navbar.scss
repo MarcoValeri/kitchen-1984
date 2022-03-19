@@ -26,14 +26,21 @@
                 display: block;
             }
 
+            &:checked ~ .nav__cross {
+                display: block;
+                text-align: left;
+                font-size: 3rem;
+            }
+
             &:checked ~ .nav__span {
                 display: none;
             }
+
         }
     }
 
-    &__menu-mobile {
-        position: absolute;
+    &__cross {
+        display: none;
     }
 
     &__span {
